@@ -24,6 +24,14 @@ g++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o volleyball_tracker
 
 Open `index.html` in a browser to view the dashboard.
 
+## Validation and Sample Output
+
+```bash
+bash tests/test_console.sh
+```
+
+The test compiles with strict C++17 warnings enabled and verifies player rows, serve percentages, and receive averages. [View the console output](sample-output/console-output.txt).
+
 ## Skills Demonstrated
 
 C++, HTML, CSS, JavaScript, data validation, reusable functions, formatted reporting, and sports-performance analysis.
