@@ -1,0 +1,5 @@
+$ ./volleyball_tracker
+Player               Serve %    Aces Receive Avg
+Player One               90.0%       3        2.27
+Player Two               93.8%       2        2.33
+Player Three             83.3%       1        2.10
