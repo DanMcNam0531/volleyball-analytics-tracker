@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Volleyball Analytics Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #d0d7de; padding: .7rem; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: #f6f8fa; }
+  </style>
+</head>
+<body>
+  <h1>Volleyball Analytics Tracker</h1>
+  <p>Example dashboard for serve and serve-receive performance.</p>
+  <table>
+    <thead><tr><th>Player</th><th>Serve %</th><th>Aces</th><th>Receive Average</th></tr></thead>
+    <tbody id="stats"></tbody>
+  </table>
+  <script>
+    const players = [
+      { name: "Player One", attempts: 20, servesIn: 18, aces: 3, receptions: 15, receivePoints: 34 },
+      { name: "Player Two", attempts: 16, servesIn: 15, aces: 2, receptions: 18, receivePoints: 42 },
+      { name: "Player Three", attempts: 12, servesIn: 10, aces: 1, receptions: 10, receivePoints: 21 }
+    ];
+    document.querySelector("#stats").innerHTML = players.map(player => `
+      <tr>
+        <td>${player.name}</td>
+        <td>${((player.servesIn / player.attempts) * 100).toFixed(1)}%</td>
+        <td>${player.aces}</td>
+        <td>${(player.receivePoints / player.receptions).toFixed(2)}</td>
+      </tr>`).join("");
+  </script>
+</body>
+</html>
